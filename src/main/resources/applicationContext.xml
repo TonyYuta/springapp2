@@ -16,4 +16,8 @@
     <bean id="musicBean" class="org.javaweb.SoulMusic">
     </bean>
 
+    <bean id="musicPlayer" class="org.javaweb.MusicPlayer">
+        <constructor-arg ref="musicBean" />
+    </bean>
+
 </beans>
