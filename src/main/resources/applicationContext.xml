@@ -7,9 +7,13 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean"
-           class="org.javaweb.TestBean">
-        <constructor-arg value="Yutaka" />
-    </bean>>
+<!--    <bean id="musicBean" class="org.javaweb.ClassicalMusic">-->
+<!--    </bean>-->
+
+<!--    <bean id="musicBean" class="org.javaweb.RockMusic">-->
+<!--    </bean>-->
+
+    <bean id="musicBean" class="org.javaweb.SoulMusic">
+    </bean>
 
 </beans>
