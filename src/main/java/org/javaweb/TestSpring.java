@@ -8,9 +8,21 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        MusicPlayer firstMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        musicPlayer.playMusicList();
+        firstMusicPlayer.playMusicList();
+        secondMusicPlayer.playMusicList();
+
+        firstMusicPlayer.setVolume(10);
+        System.out.println(" firstMusicPlayer.getVolume(): " + firstMusicPlayer.getVolume());
+        System.out.println("secondMusicPlayer.getVolume(): " + secondMusicPlayer.getVolume());
+
+
+        boolean isSameLink = firstMusicPlayer == secondMusicPlayer;
+        System.out.println("isSameLink: " + isSameLink);
+        System.out.println(firstMusicPlayer);
+        System.out.println(secondMusicPlayer);
 
         context.close();
     }

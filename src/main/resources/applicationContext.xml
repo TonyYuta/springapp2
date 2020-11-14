@@ -22,7 +22,9 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="org.javaweb.MusicPlayer">
+          class="org.javaweb.MusicPlayer"
+          scope="prototype">
+
         <property name="musicList">
             <list>
                 <ref bean="musicBean1"/>
