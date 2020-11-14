@@ -10,31 +10,41 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="musicBean1"
-          class="org.javaweb.ClassicalMusic">
+          class="org.javaweb.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+        factory-method="getClassicalMusic">
     </bean>
 
     <bean id="musicBean2"
-          class="org.javaweb.RockMusic">
+          class="org.javaweb.RockMusic"
+          scope="prototype"
+          init-method="init"
+          destroy-method="destroy">
     </bean>
+
+<!--    <bean id="musicBean2"-->
+<!--          class="org.javaweb.RockMusic">-->
+<!--    </bean>-->
 
     <bean id="musicBean3"
           class="org.javaweb.RapMusic">
     </bean>
 
-    <bean id="musicPlayer"
-          class="org.javaweb.MusicPlayer"
-          scope="prototype">
+<!--    <bean id="musicPlayer"-->
+<!--          class="org.javaweb.MusicPlayer"-->
+<!--          scope="prototype">-->
 
-        <property name="musicList">
-            <list>
-                <ref bean="musicBean1"/>
-                <ref bean="musicBean2"/>
-                <ref bean="musicBean3"/>
-            </list>
-        </property>
+<!--        <property name="musicList">-->
+<!--            <list>-->
+<!--                <ref bean="musicBean1"/>-->
+<!--                <ref bean="musicBean2"/>-->
+<!--                <ref bean="musicBean3"/>-->
+<!--            </list>-->
+<!--        </property>-->
 
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+<!--        <property name="name" value="${musicPlayer.name}"/>-->
+<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+<!--    </bean>-->
 
 </beans>
