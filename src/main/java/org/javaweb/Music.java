@@ -1,5 +1,9 @@
 package org.javaweb;
 
+
+import java.util.List;
+
 public interface Music {
-    String getSong();
+    // Интерфейс тоже поменяли
+    List<String> getSongs();
 }
