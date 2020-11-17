@@ -8,8 +8,6 @@ import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-@Scope("prototype")
 public class ClassicalMusic implements Music {
 
     @PostConstruct
